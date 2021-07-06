@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  plex:
+    image: plexinc/pms-docker:latest
+    restart: unless-stopped
+    container_name: plex
+    environment:
+      - PLEX_UID=1027
+      - PLEX_GID=100
+      - TZ="Asia/Singapore"
+    volumes:
+      - plex-config:/config
+      - plex-transcode:/transcode
+      - /volume1:/volume1:ro
+    network_mode: host
+
+volumes:
+  plex-config:
+    external: true
+  plex-transcode:
+    external: true
