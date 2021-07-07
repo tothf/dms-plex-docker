@@ -70,7 +70,7 @@ It is very easy but it will need a bit of downtime.
    -e PLEX_GID=100 \
    -v plex-config:/config \
    -v plex-transcode:/transcode \
-   -v /volume1:/volume1:ro \
+   -v /volume1/Media:/volume1/Media:ro \
    plexinc/pms-docker:latest
    ```
    I've uploaded a docker-compose file as well in case you would like to run it with docker-compose
