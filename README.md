@@ -56,7 +56,7 @@ It is very easy but it will need a bit of downtime.
 1. The media folder<br>
    In Plex the libraries are pointed to different folders.<br>
    Let's say we have a Shared folder /volume1/Media. Under this we have Movies and TVShows folders where we have our content.<br>
-   Since in Plex our linraries are pointe to /volume1/Media/Movies and /volume1/Media/TVShows we will mount /volume1 into our Plex container
+   Since in Plex our linraries are pointe to /volume1/Media/Movies and /volume1/Media/TVShows we will mount /volume1/Media into our Plex container
 1. Start the docker container<br>
    To start the plex container run the following command (Change time zone, path, PLEX_UID, PLEX_GID and docker image name accordingly):
    ```
@@ -65,7 +65,7 @@ It is very easy but it will need a bit of downtime.
    --name plex \
    --network=host \
    --restart unless-stopped \
-   -e TZ="Asia/Singapore" \
+   -e TZ=Asia/Singapore \
    -e PLEX_UID=1027 \
    -e PLEX_GID=100 \
    -v plex-config:/config \
