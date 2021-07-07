@@ -11,7 +11,7 @@ services:
     volumes:
       - plex-config:/config
       - plex-transcode:/transcode
-      - /volume1:/volume1:ro
+      - /volume1/Media:/volume1/Media:ro
     network_mode: host
 
 volumes:
