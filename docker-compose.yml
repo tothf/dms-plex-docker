@@ -7,7 +7,7 @@ services:
     environment:
       - PLEX_UID=1027
       - PLEX_GID=100
-      - TZ="Asia/Singapore"
+      - TZ=Asia/Singapore
     volumes:
       - plex-config:/config
       - plex-transcode:/transcode
